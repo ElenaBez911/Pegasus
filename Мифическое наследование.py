@@ -1,27 +1,23 @@
 class Hourse:
 
-    def __init__(self, *args):
+    def __init__(self):
         self.x_distance = 0
         self.sound = 'Ffff'
-        super().__init__(*args)
+        super().__init__()
 
     def run(self, dx):
         self.x_distance += dx
 
 class Eagle:
 
-    def __init__(self, *args):
+    def __init__(self):
         self.y_distance = 0
         self.sound = 'i train, eat, sleep, and repeat'
-        super().__init__(*args)
 
     def fly(self, dy):
         self.y_distance += dy
 
 class Pegasus(Hourse, Eagle):
-
-    def __init__(self, *args):
-        super().__init__(*args)
 
     def move(self, dx, dy):
         super().run(dx)
